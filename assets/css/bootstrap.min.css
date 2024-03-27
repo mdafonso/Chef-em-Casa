@@ -29,44 +29,41 @@
     margin-top: 11px;
 }
 
-.container1 {
-    
+.container1 { 
+    display: flex;
     background-color: #779B58;
-    margin-top: 10px;
     height: 60px;
-    left: 1280px;
-    border-radius: 5px;
-    display: flex; /* Torna o container1 um flex container */
-    justify-content: center; /* Alinha as imagens horizontalmente no centro */
-    align-items: center; /* Alinha as imagens verticalmente no centro */
-    
-  
+    border-radius: 5px;  
 }
 
-.img1{
+.img .casa {
     width: 30px; 
-    height: auto; 
-    margin-left: 40px;
+    height: auto;
+    margin-top: 15px;
+    margin-left: 635px;
  
 }
 
-.img2{
+.img .procurar {
     width: 30px; 
-    height: auto; 
-    margin-left: 40px;
+    height: auto;
+    margin-top: 15px; 
+    margin-left: 60px;
   
 }
 
-.img3{
+.img .camera {
     width: 30px; 
     height: auto; 
-    margin-left: 40px; 
+    margin-top: 15px;
+    margin-left: 60px; 
  
 }
 
-.img4{
+.img .coracao {
     width: 30px; 
     height: auto; 
-    margin-left: 40px;
+    margin-top: 15px;
+    margin-left: 60px;
 
 }
