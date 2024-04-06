@@ -1,16 +1,22 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
   <title>Chef em Casa</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> -->
+
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/popper.min.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
 
   <meta name="description" content="PWA-teste">
+
   <link rel="manifest" href="manifest.json">
 
   <meta name="mobile-web-app-capable" content="yes">
@@ -28,6 +34,7 @@
   <link rel="apple-touch-icon" sizes="152x152" href="assets/img/icon_152.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/img/icon_180.png">
   <link rel="apple-touch-icon" sizes="167x167" href="assets/img/icon_167.png">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
   <link href="assets/img/ios/ipad.png" sizes="3200x4267" rel="apple-touch-startup-image" />
   <link href="assets/img/ios/ipadpro.png" sizes="3475x4633" rel="apple-touch-startup-image" />
   <link href="assets/img/ios/ipadpro2.png" sizes="4267x5692" rel="apple-touch-startup-image" />
@@ -37,28 +44,34 @@
   <link href="assets/img/ios/IphoneX-05.png" sizes="2344x5075" rel="apple-touch-startup-image" />
 
   <link rel="icon" type="image/png" href="assets/img/icon_144.png">
-</head>
-
-<body>
   <div class="inicio">
+    
     <img class="img" alt="logotipo" src="assets/img/logotipo.png">
     <h4>Aqui, você terá acesso a receitas e dicas de culinária que irão ajudá-lo a dominar
       técnicas profissionais, truques e segredos dos chefs.</h4>
+    
+  </div>
+</head>
+
+
+<body>
+    
   </div>
 
   <div class="container">
     <div class="row">
       <div class="col-sm-4">
         <h3>Sobremesas</h3>
-        <p>Descubra um mundo de delícias culinárias com nossas receitas, desde tortas clássicas até
-          sorvetes refrescantes. Explore segredos de confeitaria e aprenda técnicas essenciais para criar sobremesas
-          irresistíveis em sua própria cozinha.</p>
+        <p>
+          Descubra um mundo de delícias culinárias com nossas receitas, desde tortas clássicas até 
+          sorvetes refrescantes. Explore segredos de confeitaria e aprenda técnicas essenciais para criar sobremesas 
+          irresistíveis em sua própria cozinha. </p>
         <p>Deixe-se envolver pelos aromas tentadores e texturas sedosas, transformando ingredientes simples em sobremesas extraordinárias.</p>
         <img class="img-fluid" alt="figura de uma sobremesa" src="assets/img/sobremesa.jpg">
       </div>
       <div class="col-sm-4">
         <h3>Sopas</h3>
-        <p>Explore uma variedade de receitas que oferecem uma mistura irresistível de sabores e texturas,
+        <p>Explore uma variedade de receitas que oferecem uma mistura irresistível de sabores e texturas, 
           aquecendo seu corpo e alma. Nossas receitas de sopas cremosas são nutritivas e deliciosas.
         </p>
         <p>Descubra a arte de criar caldos ricos e mergulhe em sabores reconfortantes que são simplesmente irresistíveis.</p>
@@ -66,25 +79,29 @@
       </div>
       <div class="col-sm-4">
         <h3>Lanches</h3>
-        <p> Dos clássicos petiscos salgados aos lanches doces e reconfortantes, nossas receitas oferecem uma
+        <p> Dos clássicos petiscos salgados aos lanches doces e reconfortantes, nossas receitas oferecem uma 
           ampla gama de opções para todos os gostos e ocasiões.</p>
-        <p>Explore combinações de ingredientes criativas, experimente novos sabores e descubra maneiras divertidas
-          de saciar seus desejos entre as refeições. Com nossas receitas de lanches, você pode transformar momentos
+        <p>Explore combinações de ingredientes criativas, experimente novos sabores e descubra maneiras divertidas 
+          de saciar seus desejos entre as refeições. Com nossas receitas de lanches, você pode transformar momentos 
           cotidianos em experiências memoráveis</p>
-        <img class="img-fluid" alt="figura de um sanduíche" src="assets/img/lanches.jpg" />
+        <img class="img-fluid" alt="figura de um sanduiche" src="assets/img/laches.jpg" />
       </div>
-    </div>
+    </div> 
   </div>
-
   <footer>
-    <div class="container1">
-      <img class="casa" alt="" src="assets/img/casa.png" />
-      <img class="procurar" alt="" src="assets/img/procurar.png" />
-      <img class="camera" alt="" src="assets/img/camera.png" />
-      <img class="coracao" alt="" src="assets/img/coracao.png" />
-    </div>
-  </footer>
+   <div class="container1">
+     <img class="casa" alt="" src="assets/img/casa.png" />
+    
+     <img class="procurar" alt="" src="assets/img/procurar.png" />
+    
+     <img class="camera" alt="" src="assets/img/camera.png" />
+   
+     <img class="coracao" alt="" src="assets/img/coracao.png" />
+    
+   </div>
 
+  </footer>
+ 
   <script>
     let newWorker;
     if ('serviceWorker' in navigator) {
