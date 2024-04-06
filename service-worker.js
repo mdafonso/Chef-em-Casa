@@ -1,77 +1,61 @@
- "name": "PWA Teste",
-  "short_name": "PWA Teste",
-  "icons": [
-    {
-      "src": "assets/img/icon_72.png",
-      "sizes": "72x72",
-      "type": "image/png"
-    },
-    {
-      "src": "assets/img/icon_144.png",
-      "sizes": "144x144",
-      "type": "image/png"
-    },
-    {
-      "src": "assets/img/icon_180.png",
-      "sizes": "180x180",
-      "type": "image/png"
-    },
-    {
-      "src": "assets/img/icon_120.png",
-      "sizes": "120x120",
-      "type": "image/png"
-    },
-    {
-      "src": "assets/img/icon_114png",
-      "sizes": "114x114",
-      "type": "image/png"
-    },
-    {
-      "src": "assets/img/icon_96.png",
-      "sizes": "96x96",
-      "type": "image/png"
-    },
-    {
-      "src": "assets/img/icon_87.png",
-      "sizes": "87x87",
-      "type": "image/png"
-    },
-    {
-      "src": "assets/img/icon_80.png",
-      "sizes": "80x80",
-      "type": "image/png"
-    }
-    {
-      "src": "assets/img/icon_60.png",
-      "sizes": "60x60",
-      "type": "image/png"
-    }
-    {
-      "src": "assets/img/icon_57.png",
-      "sizes": "57x57",
-      "type": "image/png"
-    }
-    {
-      "src": "assets/img/icon_48.png",
-      "sizes": "48x48",
-      "type": "image/png"
-    }
-    {
-      "src": "assets/img/icon_40.png",
-      "sizes": "40x40",
-      "type": "image/png"
-    }
-    {
-      "src": "assets/img/icon_29.png",
-      "sizes": "29x29",
-      "type": "image/png"
-    }
-    
+ var cacheName = 'pwaTeste+-v1.0';
 
+self.addEventListener('install', event => {
 
+  self.skipWaiting();
 
-  "start_url": "index.html",
-  "display": "standalone",
-  "background_color": "#31506F",
-  "theme_color": "#4D5360"
-}
+  event.waitUntil(
+    caches.open(cacheName)
+      .then(cache => cache.addAll([
+
+        './index.html',
+
+        './assets/css/bootstrap.min.css',
+
+        './assets/js/bootstrap.min.js',
+
+        './assets/js/jquery.min.js',
+
+        './assets/js/popper.min.js',
+
+      
+        './assets/img/logotipo.png',
+        './assets/img/icon_29.png',
+        './assets/img/icon_40.png',
+        './assets/img/icon_60.png',
+        './assets/img/icon_57.png',
+        './assets/img/icon_80.png',
+        './assets/img/icon_87.png',
+        './assets/img/icon_96.png',
+        './assets/img/icon_114png',
+        './assets/img/icon_120.png',
+        './assets/img/icon_180.png',
+        './assets/img/icon_144.png',
+        './assets/img/icon_72.png',
+        
+
+        './assets/img/sobremesa.jpg',
+        './assets/img/sopas.jpg',
+        './assets/img/laches.jpg',
+      ]))
+  );
+});
+
+self.addEventListener('message', function (event) {
+  if (event.data.action === 'skipWaiting') {
+    self.skipWaiting();
+  }
+});
+
+self.addEventListener('fetch', function (event) {
+  //Atualizacao internet
+  event.respondWith(async function () {
+    try {
+      return await fetch(event.request);
+    } catch (err) {
+      return caches.match(event.request);
+    }
+  }());
+
+});
+
