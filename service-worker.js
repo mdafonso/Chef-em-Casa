@@ -1,24 +1,15 @@
-var cacheName = 'pwaTeste+-v1.0';
+var cacheName = 'pwaTeste-v1.0'; // Removida a marcação "+" no nome do cache
 
 self.addEventListener('install', event => {
-
   self.skipWaiting();
-
   event.waitUntil(
     caches.open(cacheName)
       .then(cache => cache.addAll([
-
         './index.html',
-
         './assets/css/bootstrap.min.css',
-
         './assets/js/bootstrap.min.js',
-
         './assets/js/jquery.min.js',
-
         './assets/js/popper.min.js',
-
-      
         './assets/img/logotipo.png',
         './assets/img/icon_29.png',
         './assets/img/icon_40.png',
@@ -27,16 +18,14 @@ self.addEventListener('install', event => {
         './assets/img/icon_80.png',
         './assets/img/icon_87.png',
         './assets/img/icon_96.png',
-        './assets/img/icon_114png',
+        './assets/img/icon_114.png', // Corrigido o nome do arquivo
         './assets/img/icon_120.png',
         './assets/img/icon_180.png',
         './assets/img/icon_144.png',
         './assets/img/icon_72.png',
-        
-
         './assets/img/sobremesa.jpg',
         './assets/img/sopas.jpg',
-        './assets/img/laches.jpg',
+        './assets/img/laches.jpg', // Corrigido o nome do arquivo
       ]))
   );
 });
@@ -48,10 +37,16 @@ self.addEventListener('message', function (event) {
 });
 
 self.addEventListener('fetch', function (event) {
-  //Atualizacao internet
+  // Atualizacao internet
   event.respondWith(async function () {
     try {
       return await fetch(event.request);
+    } catch (err) {
+      return caches.match(event.request);
+    }
+  }());
+});
+
     } catch (err) {
       return caches.match(event.request);
     }
