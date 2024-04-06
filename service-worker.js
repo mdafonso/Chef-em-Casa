@@ -18,14 +18,14 @@ self.addEventListener('install', event => {
         './assets/img/icon_80.png',
         './assets/img/icon_87.png',
         './assets/img/icon_96.png',
-        './assets/img/icon_114.png', // Corrigido o nome do arquivo
+        './assets/img/icon_114.png',
         './assets/img/icon_120.png',
         './assets/img/icon_180.png',
         './assets/img/icon_144.png',
         './assets/img/icon_72.png',
         './assets/img/sobremesa.jpg',
         './assets/img/sopas.jpg',
-        './assets/img/lanches.jpg', // Corrigido o nome do arquivo
+        './assets/img/lanches.jpg',
       ]))
   );
 });
