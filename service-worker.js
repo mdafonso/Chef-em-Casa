@@ -1,4 +1,4 @@
-var cacheName = 'pwaTeste-v1.0'; // Removida a marcação "+" no nome do cache
+var cacheName = 'pwaTeste-v1.0';
 
 self.addEventListener('install', event => {
   self.skipWaiting();
@@ -25,7 +25,7 @@ self.addEventListener('install', event => {
         './assets/img/icon_72.png',
         './assets/img/sobremesa.jpg',
         './assets/img/sopas.jpg',
-        './assets/img/laches.jpg', // Corrigido o nome do arquivo
+        './assets/img/lanches.jpg', // Corrigido o nome do arquivo
       ]))
   );
 });
@@ -37,19 +37,10 @@ self.addEventListener('message', function (event) {
 });
 
 self.addEventListener('fetch', function (event) {
-  // Atualizacao internet
-  event.respondWith(async function () {
-    try {
-      return await fetch(event.request);
-    } catch (err) {
-      return caches.match(event.request);
-    }
-  }());
+  event.respondWith(
+    caches.match(event.request).then(function(response) {
+      return response || fetch(event.request);
+    })
+  );
 });
 
-    } catch (err) {
-      return caches.match(event.request);
-    }
-  }());
-
-});
