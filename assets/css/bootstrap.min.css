@@ -45,16 +45,16 @@
 
 .container1 .casa{
     margin-top: 15px;
-    height: 30px;
-    left: auto;
+    height: 32px;
+    left: 32px;
 }
 
 
 .container1 .procurar{
     margin-top: 15px;
     margin-left: 55px;
-    height: 30px;
-    left: auto;
+    height: 32px;
+    left: 32px;
     
     
 }
@@ -62,16 +62,15 @@
 .container1 .camera{
     margin-top: 15px;
     margin-left: 55px;
-    height: 30px;
-    left: auto;
+    height: 32px;
+    left: 32px;
     
 }
 
 .container1 .coracao{
     margin-top: 12px;
     margin-left: 55px;
-    height: 35px;
-    left: auto;
+    height: 32px;
+    left: 32px;
     
 }
-
