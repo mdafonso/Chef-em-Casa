@@ -19,6 +19,7 @@
 
   <link rel="manifest" href="manifest.json">
 
+
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="msapplication-TileImage" content="assets/img/icon_144.png">
   <meta name="msapplication-TileColor" content="#31506F">
@@ -92,16 +93,24 @@
     
     <img class="procurar" alt="" src="assets/img/procurar_64.png" />
     
-    <img class="camera" alt="" src="assets/img/camera_64.png" />
+    <button onclick="takePhoto()"><img class="camera" alt="" src="assets/img/camera_64.png" /></button>
    
     <img class="coracao" alt="" src="assets/img/coracao_64.png" />
     
   </div>
 
+  
+  <button onclick="getStream()">Grab video</button>
+<p><video autoplay style="height: 180px; width: 240px;"></video></p>
+<p><button onclick="takePhoto()"><img class="camera" alt="" src="assets/img/camera_64.png" /></button></p>
+<p><img id="imageTag" width="240" height="180"></p>
+
+<p><small>Demo by <a href="http://www.mcasas.tk/" target="_blank" rel="noopener">Miguel Casas-Sanchez</a>.</small></p>
+
 </footer>
    
   
-
+<script src="/Chef-em-Casa-main/assets/js/foto.js"></script>
   <script>
     let newWorker;
     if ('serviceWorker' in navigator) {
