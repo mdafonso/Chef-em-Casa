@@ -111,6 +111,11 @@
       "src": "assets/img/procurar_32.png",
       "sizes": "32x32",
       "type": "image/png"
+    },
+    {
+      "src": "assets/img/icon_512.png",
+      "sizes": "512x512",
+      "type": "image/png"
     }
     
   ],
